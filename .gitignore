@@ -1,7 +1,48 @@
+# 虚拟环境
 .venv
 *.venv
 venv
 
+# 系统文件
 .DS_Store
 
+# 环境变量
 .env
+*.env
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 主输出目录 - 忽略所有生成的文件，但保留目录结构
+output/**/*.md
+output/**/*.json
+output/**/*.txt
+
+# 测试目录 - 只保留full_test相关部分和测试数据
+test/output/**/*.md
+test/output/**/*.json
+test/chapters/**/*.md
+test/cleaned/**/*.md
+test/converted/**/*.md
+test/converted/**/*.json
+test/full_test/chapters/**/*.md
+test/full_test/cleaned/**/*.md
+test/full_test/converted/**/*.md
+
+# 确保保留文件夹结构
+!output/.gitkeep
+!output/chapters/.gitkeep
+!output/cleaned/.gitkeep
+!output/converted/.gitkeep
+!output/summary/.gitkeep
+
+# 保留full_test文件夹结构
+!test/full_test/.gitkeep
+!test/full_test/chapters/.gitkeep
+!test/full_test/cleaned/.gitkeep
+!test/full_test/converted/.gitkeep
+
+# 保留测试数据文件
+!test/data/*.md
